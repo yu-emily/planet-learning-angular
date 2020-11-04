@@ -1,6 +1,6 @@
 export class Word{
     constructor(
-        public category: string,
+        public letter: string,
         public word: string,
         public definition: string,
     ){}

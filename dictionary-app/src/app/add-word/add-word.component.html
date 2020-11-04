@@ -1,13 +1,13 @@
 <h3>Add Word to Dictionary</h3>
 <form [formGroup]="addWordForm" (ngSubmit)="onSubmit()">
     <label for="word">Word: 
-        <input id="word" type="text" formControlName="word" placeholder="Serendipity">
+        <input id="word" type="text" formControlName="word" placeholder="tsundoku">
     </label>
     <label for="definition">Definition: 
-        <input id="definition" type="text" formControlName="definition" placeholder="">
+        <input id="definition" type="text" formControlName="definition" placeholder="The act of leaving a book unread after buying it; The condition of acquiring reading materials but letting them pile up in one's home without reading them.">
     </label>
-    <label for="category">Category: 
-        <input id="category" type="text" formControlName="category" placeholder="S">
+    <label for="letter">Letter: 
+        <input id="letter" type="text" formControlName="letter" placeholder="T">
     </label>
     <button type="submit" [disabled]="!addWordForm.valid">Create Entry</button>
 </form>  
@@ -17,7 +17,7 @@
     <ul>
         <li>Word: {{word.word}}</li>
         <li>Definition: {{word.definition}}</li>
-        <li>Category: {{word.category}}</li>
+        <li>Letter: {{word.letter}}</li>
     </ul>
 </div>
 

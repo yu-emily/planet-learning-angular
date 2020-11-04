@@ -1,0 +1,13 @@
+<h3>List of Words in Dictionary</h3>
+
+<div *ngIf="wordList">
+    <ul *ngFor="let letter of allLetters">
+        <li>
+            <h3>{{letter}}</h3>
+            <ul *ngFor="let word of wordList | letterIndex: letter">
+                <li><u>{{word.word}}</u></li>
+                <p>{{word.definition}}</p>
+            </ul>    
+        </li>    
+    </ul>
+</div>

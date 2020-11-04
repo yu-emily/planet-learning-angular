@@ -13,7 +13,7 @@ export class AddWordComponent implements OnInit {
   addWordForm = new FormGroup({
     word: new FormControl(''),
     definition: new FormControl(''),
-    category: new FormControl('')
+    letter: new FormControl('')
   });
 
   word: Word;
@@ -27,7 +27,7 @@ export class AddWordComponent implements OnInit {
     this.word = {
       word: this.addWordForm.value.word,
       definition: this.addWordForm.value.definition,
-      category: this.addWordForm.value.category
+      letter: this.addWordForm.value.letter
     }
     this.dictionaryService.addToDictionary(this.word);
     this.addWordForm.reset();
