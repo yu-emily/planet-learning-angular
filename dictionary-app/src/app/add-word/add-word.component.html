@@ -1,0 +1,24 @@
+<h3>Add Word to Dictionary</h3>
+<form [formGroup]="addWordForm" (ngSubmit)="onSubmit()">
+    <label for="word">Word: 
+        <input id="word" type="text" formControlName="word" placeholder="Serendipity">
+    </label>
+    <label for="definition">Definition: 
+        <input id="definition" type="text" formControlName="definition" placeholder="">
+    </label>
+    <label for="category">Category: 
+        <input id="category" type="text" formControlName="category" placeholder="S">
+    </label>
+    <button type="submit" [disabled]="!addWordForm.valid">Create Entry</button>
+</form>  
+
+<div *ngIf="word">
+    <h3>See Entry</h3>
+    <ul>
+        <li>Word: {{word.word}}</li>
+        <li>Definition: {{word.definition}}</li>
+        <li>Category: {{word.category}}</li>
+    </ul>
+</div>
+
+
