@@ -31,4 +31,18 @@ export class DictionaryService {
       };
     }
   }
+
+  updateWord(word: string, definition: string): void{
+    let index = this.words.findIndex( w => w.word === word);
+    if(index !== -1){
+      this.words[index].definition = definition;
+    }
+  }
+
+  removeWord(word: string): void{
+    let index = this.words.findIndex( w => w.word === word);
+    if(index !== -1){
+      this.words = this.words.filter( w => w.word !== word);
+    }
+  }
 }

@@ -1,0 +1,15 @@
+<h4>Word to Delete</h4>
+<label for="term"></label>
+<input type="text" id="term" [formControl]="term">
+<button (click)="searchWord(term.value); deleteEntry(term.value)">Word to Delete</button>
+
+<div *ngIf="searched">
+    <div *ngIf="!searchedWord.word">
+        <p><strong>No entry found.</strong></p>
+    </div>
+    <div *ngIf="searchedWord.word">
+        <h5>Deleted Word <u>{{searchedWord.word}}</u></h5>
+        <p>Definition: {{searchedWord.definition}}</p>
+        <p>Letter: {{searchedWord.letter}}</p>
+    </div>
+</div>

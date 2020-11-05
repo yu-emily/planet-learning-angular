@@ -1,0 +1,22 @@
+<h4>Word to Update</h4>
+<label for="term"></label>
+<input type="text" id="term" [formControl]="term">
+<button (click)="searchWord(term.value)">Word to Update</button>
+
+
+<div *ngIf="searched">
+    <div *ngIf="!searchedWord.word">
+        <p><strong>No entry found.</strong></p>
+    </div>
+    <div *ngIf="searchedWord.word">
+        <label for="definition">New Definition: </label>
+        <input type="text" id="definition" [formControl]="newDefinition">
+        <button (click)="updateDefinition(searchedWord.word, searchedWord.definition, newDefinition.value)">Update</button>
+    </div>
+</div>
+
+<div *ngIf="updated">
+    <h5>Updated Word <u>{{searchedWord.word}}</u></h5>
+    <p>Old Definition: {{oldDefinition}}</p>
+    <p><em>New Definition: {{newDefinition.value}}</em></p>
+</div>

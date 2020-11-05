@@ -10,6 +10,9 @@ import { LetterIndexPipe } from './letter-index.pipe';
 import { SearchIndexComponent } from './search-index/search-index.component';
 import { WordIndexComponent } from './word-index/word-index.component';
 import { WordSearchComponent } from './word-search/word-search.component';
+import { UpdateDictionaryComponent } from './update-dictionary/update-dictionary.component';
+import { UpdateWordComponent } from './update-word/update-word.component';
+import { DeleteWordComponent } from './delete-word/delete-word.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { WordSearchComponent } from './word-search/word-search.component';
     LetterIndexPipe,
     SearchIndexComponent,
     WordIndexComponent,
-    WordSearchComponent
+    WordSearchComponent,
+    UpdateDictionaryComponent,
+    UpdateWordComponent,
+    DeleteWordComponent
   ],
   imports: [
     BrowserModule,
