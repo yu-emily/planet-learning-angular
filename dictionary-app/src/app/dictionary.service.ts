@@ -9,7 +9,10 @@ export class DictionaryService {
   words: Word[] = sampleWords;
   constructor() { }
   addToDictionary(word: Word){
-    this.words.push(word);  
+    let index = this.words.findIndex( w => w.word === word.word);
+    if(index === -1){
+      this.words.push(word);
+    }  
   }
   getFromDictionary(): Word[]{
     return this.words;

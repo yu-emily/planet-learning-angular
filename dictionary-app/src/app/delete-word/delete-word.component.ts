@@ -25,5 +25,6 @@ export class DeleteWordComponent implements OnInit {
   
   deleteEntry(word: string): void{
     this.dictionaryService.removeWord(word);
+    this.term.reset();
   }
 }

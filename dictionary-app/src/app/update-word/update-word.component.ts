@@ -13,6 +13,7 @@ export class UpdateWordComponent implements OnInit {
   searched: boolean = false;
   term = new FormControl('');
   newDefinition = new FormControl('');
+  updatedDefinition: string;
   oldDefinition: string;
   updated: boolean = false;
 
@@ -28,6 +29,9 @@ export class UpdateWordComponent implements OnInit {
   updateDefinition(word: string, old: string, definition: string): void{
     this.dictionaryService.updateWord(word, definition);
     this.oldDefinition = old;
+    this.updatedDefinition = this.newDefinition.value;
     this.updated = true;
+    this.term.reset();
+    this.newDefinition.reset();
   }
 }

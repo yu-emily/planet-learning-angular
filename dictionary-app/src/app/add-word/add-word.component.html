@@ -11,6 +11,7 @@
     </label>
     <button type="submit" [disabled]="!addWordForm.valid">Create Entry</button>
 </form>  
+<button (click)="addWordMe()">Add a Word for Me</button>
 
 <div *ngIf="word">
     <h3>See Entry</h3>

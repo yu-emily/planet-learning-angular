@@ -32,4 +32,13 @@ export class AddWordComponent implements OnInit {
     this.dictionaryService.addToDictionary(this.word);
     this.addWordForm.reset();
   }
+
+  addWordMe(): void{
+    this.word = {
+      word: 'tsundoku',
+      definition: 'The act of leaving a book unread after buying it; the condition of acquiring reading materials but letting them pile up in one\'s home without reading them.',
+      letter: 'T'
+    }
+    this.dictionaryService.addToDictionary(this.word);
+  }
 }
