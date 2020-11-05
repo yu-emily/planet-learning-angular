@@ -1,0 +1,17 @@
+<h4>
+    Search Word
+</h4>
+<label for="term"></label>
+<input type="text" id="term" [formControl]="term">
+<button (click)="searchWord(term.value)">Lookup</button>
+
+
+<div *ngIf="searched">
+    <div *ngIf="!searchedWord.word">
+        <p><strong>No results found</strong></p>
+    </div>
+    <div *ngIf="searchedWord.word">
+        <p><strong>{{searchedWord.word}}</strong></p>
+        <p>{{searchedWord.definition}}</p>
+    </div>
+</div>

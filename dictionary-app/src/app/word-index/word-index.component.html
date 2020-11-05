@@ -1,0 +1,15 @@
+<h4>Index</h4>
+<div *ngIf="wordList">
+    <ul>
+    <span *ngFor="let letter of allLetters" (click)="onSelectLetter(letter)">
+        {{letter}}    
+    </span>
+</ul>
+</div>
+
+<div *ngIf="selectedLetter">
+    <li *ngFor="let word of wordList | letterIndex: selectedLetter">
+        <u>{{word.word}}</u>
+        <p>{{word.definition}}</p>
+    </li>
+</div>
